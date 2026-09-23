@@ -1,0 +1,35 @@
+INPUT: N (bilangan bulat)
+
+IF N <= 2 THEN
+    PRINT "square = Nilai terlalu kecil"
+ELSE IF N >= 10 THEN
+    PRINT "square = Nilai terlalu besar"
+ELSE
+    PRINT "square ="
+    
+    // Inisiasi Variabel
+    STRING batas_horizontal = "=" * N // Cetak karakter "=" sebanyak N kali
+    
+    STRING spasi_kosong = " " * (N - 2) // Cetak spasi kosong sebanyak (N - 2) kali
+    STRING baris_tengah = "|" + spasi_kosong + "|"
+    
+    STRING baris_gabungan = ""
+    
+    // Cetak dan gabungkan baris atas
+    PRINT batas_horizontal
+    baris_gabungan = baris_gabungan + batas_horizontal
+    
+    // Cetak dan gabungkan baris tengah sebanyak (N - 2) kali
+    FOR i = 1 TO (N - 2)
+        PRINT baris_tengah
+        baris_gabungan = baris_gabungan + baris_tengah
+    END FOR
+    
+    // Cetak dan gabungkan baris bawah
+    PRINT batas_horizontal
+    baris_gabungan = baris_gabungan + batas_horizontal
+    
+    // Cetak hasil baris gabungan
+    PRINT baris_gabungan
+    
+END IF
